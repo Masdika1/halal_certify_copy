@@ -20,9 +20,9 @@ jobs:
 
     - name: Deploy to ECS
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@13.210.13.84 << 'EOF'
+        ssh -o StrictHostKeyChecking=no ubuntu@52.65.219.71 << 'EOF'
         cd /var/www/runningCIDC/halal_certify
-        git pull origin main
+        sudo git pull origin main
         # Restart Nginx or any other service if needed
         sudo systemctl restart nginx
         EOF
